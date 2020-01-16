@@ -1,0 +1,16 @@
+.example-container {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.table-row {
+  cursor: default;
+}
+
+.table-row:hover{
+  cursor: pointer;
+  background-color: #EEE;
+}

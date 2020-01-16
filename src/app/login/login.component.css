@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.token-card {
+  /* width: 300; */
+}
+
+.header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTETJkY3HaXCgCNjBvD0KAczsJsF8LqZH_IQnfvI63SKTjNcjt0&s');
+  background-size: cover;
+}
+
+.full-width {
+  width: 100%;
+}

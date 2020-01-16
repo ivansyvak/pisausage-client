@@ -1,0 +1,42 @@
+<mat-horizontal-stepper labelPosition="bottom" #stepper style="height: 100%;">
+
+  <mat-step label="Получите код доступа" [editable]="step==0">
+    <div class="container">
+
+      <mat-card class="token-card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>Pisausage</mat-card-title>
+          <mat-card-subtitle>200 IQ Bot</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Пссс, парень! Хочешь поиграть со мной? Отправляй <b>!login</b> мне в ЛС. 
+          </p>
+
+          <p>Полученный код доступа введи в поле ниже и нажмите кнопку Далее</p>
+
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Код доступа" required [(ngModel)]="tmpKey">
+          </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <!-- <button mat-button >LIKE</button> -->
+          <button mat-button color="primary" (click)="login()" [attr.enabled]="!loading">Далее</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+    
+  </mat-step>
+
+  <mat-step label="Настройте профиль" [editable]="step==1" style="height: 100%;">
+    <app-profile (onSave)="onProfileSave();" [editMode]="true"></app-profile>
+  </mat-step>
+
+  <mat-step label="Готово" [editable]="step==2">
+    <button mat-button color="primary" (click)="authorize()" [attr.enabled]="!loading">Начать</button>
+  </mat-step>
+
+</mat-horizontal-stepper>
