@@ -1,0 +1,14 @@
+<mat-card *ngIf="userState">
+  <mat-card-header>
+    <div mat-card-avatar class="profile-header-image" [style.backgroundImage]="getTrustedImage(userState)"></div>
+    <mat-card-title>{{userState.username}}</mat-card-title>
+    <mat-card-subtitle>Кожаный мешок</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+  </mat-card-content>
+  <mat-card-actions align="end" *ngIf="editMode">
+    <button mat-button color="primary" (click)="triggerOnSave();">Далее</button>
+  </mat-card-actions>
+</mat-card>
+<h3>Фразы</h3>
+<app-phrases></app-phrases>

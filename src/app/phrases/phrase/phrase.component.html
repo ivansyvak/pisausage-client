@@ -1,0 +1,14 @@
+<div [ngClass]="(isHandset$ | async) ? 'phrase-container-mobile' : 'phrase-container'">
+  <mat-form-field>
+    <input matInput placeholder="Фраза" required [(ngModel)]="key">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Текст" required [(ngModel)]="content"></textarea>
+  </mat-form-field>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="close();">Отмена</button>
+    <button mat-raised-button color="primary" (click)="postPhrase();">ОК</button>
+  </div>
+</div>
